@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        /* ① Plasmo dev サーバーを Node デバッグで起動 */
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Plasmo: dev server",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ],
+            "cwd": "${workspaceFolder}",
+            "skipFiles": [
+                "<node_internals>/**",
+                "**/node_modules/**"
+            ]
+        },
+    ]
+}
