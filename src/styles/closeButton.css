@@ -1,0 +1,30 @@
+.close-button {
+  font-weight: bold;
+  border: none;
+  background: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: color 0.2s;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button:hover {
+  color: #4b5563;
+}
+
+.close-button--small {
+  font-size: 12px;
+}
+
+.close-button--medium {
+  font-size: 16px;
+}
+
+.close-button--large {
+  font-size: 20px;
+}

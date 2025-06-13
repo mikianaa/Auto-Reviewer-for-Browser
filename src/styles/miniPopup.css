@@ -1,0 +1,89 @@
+/* mini-popup.css */
+
+.mini-popup {
+  position: absolute;
+  width: 280px;
+  background-color: #f9fafb;
+  /* bg-gray-50 */
+  border: 1px solid #d1d5db;
+  /* border-gray-300 */
+  border-radius: 0.5rem;
+  /* rounded-lg */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  /* shadow-xl */
+  z-index: 2147483647;
+  overflow: hidden;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #111827;
+  /* text-gray-800 */
+}
+
+.mini-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  /* border-gray-200 */
+  padding: 0.5rem 0.75rem;
+  /* px-3 py-2 */
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #374151;
+  /* text-gray-700 */
+}
+
+.mini-popup-body {
+  padding: 1rem;
+  /* p-4 */
+}
+
+.mini-popup-body .score {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.mini-popup-body .summary {
+  font-size: 12px;
+  color: #4b5563;
+  /* text-gray-600 */
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.mini-popup-body .button {
+  width: 100%;
+  padding: 0.375rem 0;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  background-color: #0891b2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.mini-popup-body .button:hover {
+  background-color: #0e7490;
+}
+
+.mini-popup-header .close-btn {
+  font-size: 14px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.mini-popup-header .close-btn:hover {
+  color: #6b7280;
+}
+
+.mini-popup-body .summary-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  color: #6b7280;
+  /* text-gray-500 */
+}

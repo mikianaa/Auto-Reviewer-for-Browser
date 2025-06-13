@@ -2,7 +2,7 @@ chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
         id: "plasmo-review-selection",
         title: "選択テキストをレビュー",
-        contexts: ["selection"]
+        contexts: ["editable"]
     })
 })
 

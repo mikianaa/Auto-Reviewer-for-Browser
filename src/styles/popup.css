@@ -1,0 +1,61 @@
+.popup-container {
+    width: 600px;
+    background: #fff;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.popup-tab-header {
+    display: flex;
+    gap: 32px;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 24px 0 24px;
+    background-color: #fff;
+}
+
+.popup-tab-button {
+    padding: 12px 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    color: #6b7280;
+    white-space: nowrap;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.popup-tab-button:hover {
+    color: #374151;
+}
+
+.popup-tab-button:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #d1d5db;
+    transition: background-color 0.2s ease;
+}
+
+.popup-tab-button.active {
+    color: #111827;
+    font-weight: 600;
+}
+
+.popup-tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #0891b2;
+}
+
+.popup-tab-body {
+    padding: 16px;
+}

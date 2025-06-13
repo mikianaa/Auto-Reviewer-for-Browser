@@ -1,40 +1,45 @@
-import { useEffect, useState } from "react"
-import { Loader } from "../components/Loader"
-import { useReview } from "../hooks/useReview"
-import Detail from "../detail"
+import { useState } from "react"
+import PersonaForm from "../pages/PersonaForm"
+import ReviewHistory from "../pages/ReviewHistory"
+import SettingsPanel from "../pages/SettingsPanel"
+import "../styles/popup.css"
 
 export default function Popup() {
-    const { isLoading, data, runReview } = useReview()
-    const [expanded, setExpanded] = useState(false)
+    const tabs = [
+        { id: "persona", label: "読者" },
+        { id: "history", label: "履歴" },
+        { id: "settings", label: "設定" },
+    ]
 
-    useEffect(() => {
-        void runReview("dummy text")
-    }, [])
+    const [activeTab, setActiveTab] = useState("persona")
 
-    if (expanded) {
-        return <Detail onClose={() => setExpanded(false)} />
+    const renderTab = () => {
+        switch (activeTab) {
+            case "persona":
+                return <PersonaForm />
+            case "history":
+                return <ReviewHistory />
+            case "settings":
+                return <SettingsPanel />
+            default:
+                return null
+        }
     }
 
     return (
-        <div className="w-[250px] p-4 text-sm">
-            {isLoading && (
-                <div className="grid place-items-center h-32">
-                    <Loader />
-                </div>
-            )}
-
-            {!isLoading && data && (
-                <>
-                    <p className="font-medium mb-2">Score: {data.score}/5</p>
-                    <p className="mb-3 text-gray-700">{data.summary}</p>
+        <div className="popup-container">
+            <div className="popup-tab-header">
+                {tabs.map((tab) => (
                     <button
-                        className="w-full rounded bg-blue-600 text-white py-1 text-center hover:bg-blue-700"
-                        onClick={() => setExpanded(true)}
+                        key={tab.id}
+                        className={`popup-tab-button ${activeTab === tab.id ? "active" : ""}`}
+                        onClick={() => setActiveTab(tab.id)}
                     >
-                        詳細を見る
+                        {tab.label}
                     </button>
-                </>
-            )}
+                ))}
+            </div>
+            <div className="popup-tab-body">{renderTab()}</div>
         </div>
     )
 }

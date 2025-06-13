@@ -1,0 +1,230 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.18);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    max-width: 500px;
+    width: 100%;
+    min-width: 260px;
+    max-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+}
+
+.modal-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+    text-align: left;
+}
+
+.modal-content {
+    margin-bottom: 0.5rem;
+}
+
+.modal-content p {
+    margin: 0 0 0.5rem 0;
+    white-space: pre-line;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+    overflow-y: auto;
+    max-height: 60vh;
+    padding-right: 0.5rem;
+    margin-right: -0.25rem;
+}
+
+/* スクロールバーのスタイル調整 */
+.modal-form::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-form::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.modal-form::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.modal-form::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.modal-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.18rem;
+}
+
+.modal-label {
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+    font-size: 13px;
+}
+
+.required-asterisk {
+    color: #e11d48;
+    /* 赤色 */
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.modal-input {
+    padding: 0.36rem 0.6rem;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fafbfc;
+    transition: border 0.2s;
+}
+
+.modal-input:focus {
+    border: 1.5px solid #2563eb;
+    outline: none;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.7rem;
+    margin-top: 0.3rem;
+}
+
+.modal-cancel {
+    background: #f3f4f6;
+    color: #444;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.36rem 0.8rem;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal-cancel:hover {
+    background: #e5e7eb;
+}
+
+.modal-submit {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.36rem 1rem;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal-submit:hover {
+    background: #1749b1;
+}
+
+.modal-delete {
+    background: #e11d48;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.36rem 1rem;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal-delete:hover {
+    background: #be185d;
+}
+
+.modal-warning {
+    background: #f59e0b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.36rem 1rem;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal-warning:hover {
+    background: #d97706;
+}
+
+.modal-confirm {
+    background: #10b981;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.36rem 1rem;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal-confirm:hover {
+    background: #059669;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    color: #9ca3af;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.18s, color 0.18s;
+}
+
+.modal-close-btn:hover {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+@media (max-width: 480px) {
+    .modal-container {
+        max-width: 98vw;
+        padding: 0.7rem 0.2rem;
+    }
+}

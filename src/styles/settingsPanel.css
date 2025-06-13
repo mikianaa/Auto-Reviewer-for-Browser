@@ -1,0 +1,68 @@
+.settings-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.settings-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.settings-label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.settings-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.clear-button {
+    margin-top: 0.5rem;
+    font-size: 12px;
+    color: #c00;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+.settings-note {
+    font-size: 12px;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+.theme-options {
+    display: flex;
+    gap: 1rem;
+}
+
+.saved-message {
+    color: #22c55e;
+    font-size: 14px;
+    margin-top: -1rem;
+}
+
+.settings-footer {
+    margin-top: 2rem;
+    font-size: 12px;
+    color: #888;
+}

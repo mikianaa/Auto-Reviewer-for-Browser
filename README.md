@@ -1,33 +1,12 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# 1. はじめに
 
-## Getting Started
+本文書は、AIを用いた文書フィードバック機能を持つブラウザ拡張機能 *AutoReviewer for Browser* である。
 
-First, run the development server:
+大規模言語モデル（LLM）を活用する際のプロンプトエンジニアリングにおいては、「ロールプレイング（役割指定）」が有効な手法の一つとされている。これは、AIに特定の人物や立場になりきらせることで、より文脈に沿った応答を引き出す技術であり、ユーザーがAIの視点や態度を制御するために用いられている。
 
-```bash
-pnpm dev
-# or
-npm run dev
-```
+この手法をライティング支援に応用した研究として、Benharrakらは2024年に発表した論文 *"Writer-Defined AI Personas for On-Demand Feedback Generation"* [1]において、Impressonaという対話型フィードバックシステムを提案している。Impressonaは、書き手が事前に定義した架空人格（ペルソナ）に基づいてAIが文章をレビューするものであり、ユーザーは視点の異なる複数の読者からのフィードバックを得ることができる。研究では、このシステムが文章能力の改善を促す可能性が示唆されている。
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+しかし、現状のImpressonaは専用エディタでのみ動作するという制限がある。本プロジェクトでは、このシステムをブラウザ拡張機能として実装することで、Word、Notion、VSCode、各種ブログサイトなど、ブラウザベースでの動作がサポートされているエディタ全般でImpressonaのフィードバック機能を利用可能にすることを目指す。
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
-
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
-## Making production build
-
-Run the following:
-
-```bash
-pnpm build
-# or
-npm run build
-```
-
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
-
-## Submit to the webstores
-
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+# 2. 参考文献
+[1] Benharrak, K., Zindulka, T., Lehmann, F., Heuer, H., & Buschek, D. (2024). Writer-Defined AI Personas for On-Demand Feedback Generation. In Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems (pp. 1-18). DOI: 10.1145/3613904.3642406

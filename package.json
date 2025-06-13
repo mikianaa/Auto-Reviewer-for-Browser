@@ -1,8 +1,8 @@
 {
   "name": "auto-reviewer-for-browser",
-  "displayName": "Auto reviewer for browser",
+  "displayName": "ブラウザ用自動レビューツール",
   "version": "0.0.1",
-  "description": "Persona-based document reviewer",
+  "description": "ペルソナベースの文書レビューツール",
   "author": "Yu Hashimoto",
   "scripts": {
     "dev": "plasmo dev",
@@ -10,6 +10,7 @@
     "package": "plasmo package"
   },
   "dependencies": {
+    "@floating-ui/dom": "^1.7.0",
     "plasmo": "0.90.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
